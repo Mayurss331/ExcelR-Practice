@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 19-04-2025</title>
+</head>
+<body>
+    <script>
+
+// 1)Declare variables for your name, age, and city. Print a sentence like:
+"Hi, my name is Uttam. I am 22 years old and I live in Bhubaneswar."
+let name = "Uttam";
+let age = 22;
+let city = "Bhubaneswar";
+console.log(`Hi, my name is ${name}. I am ${age} years old and I live in ${city}.`);
+// O/P:
+
+// 2)Swap the values of two variables without using a third variable.
+let a = 5, b = 10;
+a = a + b;
+b = a - b;
+a = a - b;
+console.log(a, b);
+
+// 3)Create a block scope and declare the same variable name with var and let. Log their values inside and outside the block.
+{
+  var test = "var variable";
+  let testLet = "let variable";
+  console.log("Inside block:", test, testLet);
+}
+console.log("Outside block:", test);
+
+// 4)Create 3 variables using camelCase naming convention for first name, last name, and email.
+let firstName = "John";
+let lastName = "Doe";
+let emailAddress = "john.doe@example.com";
+
+// 5)Write a program that prints the value and type of:
+// a number, a string, a boolean, undefined, a symbol, a BigInt, and null.
+let num = 42;
+let str = "Hello";
+let bool = true;
+let undef;
+let sym = Symbol("id");
+let bigInt = 123456789012345678901234567890n;
+let nul = null;
+console.log(typeof num, num);
+console.log(typeof str, str);
+console.log(typeof bool, bool);
+console.log(typeof undef, undef);
+console.log(typeof sym, sym);
+console.log(typeof bigInt, bigInt);
+console.log(typeof nul, nul);
+
+
+// 6)Write a function sum(a, b) that returns the sum of two numbers.
+function sum(a, b) {
+  return a + b;
+}
+console.log(sum(3, 4));
+// 7)Write a function to check if a number is even or odd.
+function isEven(num) {
+  return num % 2 === 0 ? "Even" : "Odd";
+}
+console.log(isEven(5));
+// 8)Create a function expression that calculates the square of a number.
+const square = function(num) {
+  return num * num;
+};
+console.log(square(4));
+// 9)Write a function expression to return the factorial of a number.
+const factorial = function(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+};
+console.log(factorial(5));
+// 10)Write an arrow function to check if a string is a palindrome.
+const isPalindrome = str => {
+  str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return str === str.split("").reverse().join("");
+};
+console.log(isPalindrome("madam"));
+// 11)Write a function processData(data, callback) that passes data to the callback function and logs the result.
+function processData(data, callback) {
+  console.log(callback(data));
+}
+processData(4, x => x * 2);
+// 12)Create a constructor function Person(name, age) and use it to create 2 person objects.
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+let person1 = new Person("Alice", 25);
+let person2 = new Person("Bob", 30);
+console.log(person1, person2);
+
+// 13)Write a generator function numberGenerator that yields numbers from 1 to 5.
+function* numberGenerator() {
+  for (let i = 1; i <= 5; i++) {
+    yield i;
+  }
+}
+for (let num of numberGenerator()) {
+  console.log(num);
+}
+// 14)Write a function that takes another function and a value, then applies the function to the value.
+function applyFunction(fn, value) {
+  return fn(value);
+}
+console.log(applyFunction(x => x + 1, 4));
+
+// 15)Create a JSON string for a profile with properties: name, age, skills. Convert it into a JS object using JSON.parse().
+let profile = '{"name":"Alice","age":30,"skills":["JavaScript","HTML","CSS"]}';
+let profileObj = JSON.parse(profile);
+console.log(profileObj);
+
+
+    </script>
+    
+</body>
+</html>

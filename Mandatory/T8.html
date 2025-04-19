@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bulb Control</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+
+    #bulb {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      background-color: white;
+      margin: 0 auto 30px auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      width: 60px;
+      height: 100px;
+      background-color: #fcebd1;
+      border: 1px solid #000;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f5dcb3;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="bulb"></div>
+
+  <div class="button-container">
+    <button onclick="turnOn()">ON</button>
+    <button onclick="turnOff()">OFF</button>
+  </div>
+
+  <script>
+    function turnOn() {
+      const color = prompt("Enter a color to light the bulb:");
+      if (color) {
+        document.getElementById("bulb").style.backgroundColor = color;
+      }
+    }
+
+    function turnOff() {
+      document.getElementById("bulb").style.backgroundColor = "white";
+    }
+  </script>
+
+</body>
+</html>
